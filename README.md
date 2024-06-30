@@ -67,5 +67,5 @@ Tasty Tender is a web application for exploring recipes based on ingredients and
    - After registering, you will be redirected to the login page.
    - Enter your username and password to log in.
 
-#### 6. this is link for demo of the recipe app
-
+#### 6. this is link for demo of the recipe app, click it
+ [DEMO FOR THE RECIPE APPLICATION](https://drive.google.com/drive/folders/1Dfm_NlE9wYHppidNDqQQw5W2EOnTDSp2?usp=sharing)
