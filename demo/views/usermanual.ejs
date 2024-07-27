@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App User Manual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-image: url("../usermanual1.jpg");
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.826);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+        border-radius: 10px;
+      }
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      ol {
+        color: #ffffff;
+      }
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+        font-size: 64px;
+        font-family: "Rouge Script", cursive;
+      }
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background-image: url(../indexbg2.jpg);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidenav a {
+        margin-top: 10px;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffffff;
+        display: block;
+        transition: 0.3s;
+        background-color: rgba(0, 0, 0, 0.785);
+        text-align: center;
+      }
+
+      .sidenav a:hover {
+        color: yellow;
+      }
+
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 72px;
+        margin-left: 50px;
+        color: black;
+        background-color: transparent;
+      }
+
+      .openbtn {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0px;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        border: 1px solid white;
+        z-index: 1; /* Add z-index */
+        border-radius: 5px;
+      }
+
+      .openbtn:hover {
+        color: aqua;
+      }
+      .sidebarprofile {
+        margin-top: 25%;
+        width: 100px;
+        height: 100px;
+        margin-left: 35%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div>
+        <img class="sidebarprofile" src="../user_6994618.png" alt="profile" />
+      </div>
+      <a href="" id="home">Home</a>
+      <a href="/login">Logout</a>
+      <a href="" id="postlink">Upload Recipe</a>
+    </div>
+
+    <span class="openbtn" onclick="openNav()">&#9776; ALL</span>
+
+    <div class="container">
+      <h1>User Manual</h1>
+
+      <h2>Introduction</h2>
+      <p>
+        Welcome to the TASTY TENDER! This guide will help you navigate and
+        utilize all the features of our app to enhance your cooking experience.
+      </p>
+
+      <h2>Getting Started</h2>
+      <h3>Main Page</h3>
+      <p>
+        The main page consists of a side navigation bar and a search bar for
+        easy access to all features.
+      </p>
+
+      <h2>Features</h2>
+      <h3>Side Navigation Bar</h3>
+      <ul>
+        <li><strong>Upload Recipe:</strong> Submit your own recipes.</li>
+        <li><strong>Saved Recipes:</strong> Access recipes you've saved.</li>
+        <li><strong>Logout:</strong> Sign out of your account.</li>
+        <li>
+          <strong>User Manual:</strong> View instructions for using the app.
+        </li>
+      </ul>
+
+      <h3>Searching and Adding Ingredients</h3>
+      <ul>
+        <li>
+          <strong>Search Bar:</strong> Enter ingredients to search and directly
+          select ingredients
+        </li>
+
+        <li>
+          <strong>Remove Ingredients:</strong> Double-click any selected
+          ingredient in the cart to remove it.
+        </li>
+        <li>
+          <strong>Category Buttons:</strong> Select ingredients from various
+          categories.
+        </li>
+        <li>
+          <strong>Add to Cart:</strong> Select ingredients then click add to the
+          cart.
+        </li>
+      </ul>
+
+      <h3>Filtering Recipes</h3>
+      <ul>
+        <li>
+          <strong>Filters:</strong> Narrow down search results by:
+          <ul>
+            <li>Preparation Time</li>
+            <li>Cuisine (multiple selections allowed)</li>
+            <li>Diet Type (multiple selections allowed)</li>
+          </ul>
+        </li>
+        <li>
+          <strong>No Results:</strong> If no recipes match your criteria, try
+          different inputs.
+        </li>
+      </ul>
+
+      <h3>Viewing Recipes</h3>
+      <ul>
+        <li>
+          <strong>Recipe Details:</strong> Click on a recipe to view:
+          <ul>
+            <li>Image</li>
+            <li>Procedure</li>
+            <li>Ingredients</li>
+            <li>Comments</li>
+            <li>Ratings</li>
+            <li>Save Recipe</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Read Aloud:</strong> Listen to the recipe procedure using the
+          read-aloud symbol.
+        </li>
+        <li>
+          <strong>Rate and Comment:</strong> Share your own ratings and
+          comments, and view those from other users.
+        </li>
+        <li>
+          <strong>Save Recipe:</strong> Use the save recipe symbol at the bottom
+          right to save a recipe.
+        </li>
+        <li>
+          <strong>Top Button:</strong> Click to return to the top of the page
+          and explore more recipes.
+        </li>
+      </ul>
+
+      <h3>Uploading Recipes</h3>
+      <ul>
+        <li>
+          <strong>Fill Form:</strong> Complete all necessary fields to upload a
+          recipe.
+        </li>
+        <li>
+          <strong>Search and Remove Ingredients:</strong> Use the search bar to
+          find ingredients and double-click to delete selected ingredients.
+        </li>
+      </ul>
+      <h2>Conclusion</h2>
+      <p>
+        Thank you for using the Recipe App! We hope you enjoy exploring and
+        cooking delicious recipes. Happy cooking!
+      </p>
+      <p
+        style="
+          background-color: rgba(255, 235, 205, 0.733);
+          color: black;
+          text-align: center;
+        "
+      >
+        For assistance, contact our support team at
+        <a href="mailto:titusshachin@gmail.com">titusshachin@gmail.com</a>.
+      </p>
+    </div>
+  </body>
+  <script src="../usermanual/usermanual.js"></script>
+</html>

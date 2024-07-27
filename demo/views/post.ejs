@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tastytender.com</title>
+    <link rel="stylesheet" href="post.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+24&family=Kablammo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="titlebar">
+      <div class="chef">
+        <img src="../chef.png" height="100%" width="100%" alt="" />
+      </div>
+      <h1 class="title">Tasty Tender</h1>
+      
+    </div>
+     
+    </div>
+    
+    
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div>
+        <img class="sidebarprofile" src="../user_6994618.png" alt="profile" />
+      </div>
+      <div class="username"></div>
+      <a href="" id="home">Home</a>
+      <a href="/logout">Logout</a>
+      <a href="" id="usermanual">Usermanual</a>
+    </div>
+
+    <span class="openbtn" onclick="openNav()">&#9776; ALL</span>
+  
+    <div class="styling">
+    <div class="recipe"> 
+      <h1>Upload Your Own Recipes</h1>
+      <input class="recipename" name="recipename" placeholder="enter the recipename"></input>
+      <div class="cuisine">Cuisine Selection<div class="chosecuisine"></div></div>
+      <div class="options-container hidden">
+        <div class="option" id="italian" name="cuisine" value="Italian">
+          <label for="italian">Italian</label>
+        </div>
+        <div class="option" id="chinese" name="cuisine" value="Chinese">
+          <label for="chinese">Chinese</label>
+        </div>
+        <div class="option" id="indian" name="cuisine" value="Indian">
+          <label for="indian">Indian</label>
+        </div>
+        <div class="option" id="mexican" name="cuisine" value="Mexican">
+          <label for="mexican">Mexican</label>
+        </div>
+        <div class="option" id="japanese" name="cuisine" value="Japanese">
+          <label for="japanese">Japanese</label>
+        </div>
+        <div class="option" id="thai" name="cuisine" value="Thai">
+          <label for="thai">Thai</label>
+        </div>
+        <div class="option" id="french" name="cuisine" value="French">
+          <label for="french">French</label>
+        </div>
+        <div class="option" id="greek" name="cuisine" value="Greek">
+          <label for="greek">Greek</label>
+        </div>
+        <div class="option" id="spanish" name="cuisine" value="Spanish">
+          <label for="spanish">Spanish</label>
+        </div>
+        <div class="option" id="mediterranean" name="cuisine" value="Mediterranean">
+          <label for="mediterranean">Mediterranean</label>
+        </div>
+      </div>
+    
+      <div class="preparationtime">Maximum Preparation Time (minutes)<nav class="chosetime"></nav></div>
+      <div class="preparationtimecontainer hidden">
+        <div class="time">10</div>
+        <div class="time">20</div>
+        <div class="time">30</div>
+        <div class="time">40</div>
+        <div class="time">50</div>
+        <div class="time">60</div>
+        <div class="time">60+</div>
+      </div>
+    
+      <div class="dietaryrestriction">Diet Type <nav class="chosediet"></nav></div>
+      <div class="dietcontainer hidden">
+        <div class="diet" id="vegetarian" name="diet" value="Vegetarian">
+          <label for="vegetarian">Vegetarian</label>
+        </div>
+        <div class="diet" id="vegan" name="diet" value="Vegan">
+          <label for="vegan">Vegan</label>
+        </div>
+        <div class="diet" id="glutenFree" name="diet" value="Gluten-Free">
+          <label for="glutenFree">Gluten-Free</label>
+        </div>
+        <div class="diet" id="dairyFree" name="diet" value="Dairy-Free">
+          <label for="dairyFree">Dairy-Free</label>
+        </div>
+        <div class="diet" id="nutFree" name="diet" value="Nut-Free">
+          <label for="nutFree">Nut-Free</label>
+        </div>
+        <div class="diet" id="soyFree" name="diet" value="Soy-Free">
+          <label for="soyFree">Soy-Free</label>
+        </div>
+        <div class="diet" id="keto" name="diet" value="Keto">
+          <label for="keto">Keto</label>
+        </div>
+        <div class="diet" id="paleo" name="diet" value="Paleo">
+          <label for="paleo">Paleo</label>
+        </div>
+        <div class="diet" id="lowFODMAP" name="diet" value="Low FODMAP">
+          <label for="lowFODMAP">Low FODMAP</label>
+        </div>
+        <div class="diet" id="kosher" name="diet" value="Kosher">
+          <label for="kosher">Kosher</label>
+        </div>
+        <div class="diet" id="halal" name="diet" value="Halal">
+          <label for="halal">Halal</label>
+        </div>
+        <div class="diet" id="pescatarian" name="diet" value="Pescatarian">
+          <label for="pescatarian">Pescatarian</label>
+        </div>
+        <div class="diet" id="lowCarb" name="diet" value="Low-Carb">
+          <label for="lowCarb">Low-Carb</label>
+        </div>
+        <div class="diet" id="lowSodium" name="diet" value="Low-Sodium">
+          <label for="lowSodium">Low-Sodium</label>
+        </div>
+        <div class="diet" id="diabetic" name="diet" value="Diabetic">
+          <label for="diabetic">Diabetic</label>
+        </div>
+        <div class="diet" id="none" name="diet" value="None">
+          <label for="diabetic">None</label>
+        </div>
+      </div>
+      <div class="ingredients">Search Ingredients:</div>
+      <input type="search" class="ingredientssearch" placeholder="type ingredients and select it">
+      <ul class="search-results" id="search-results" ></ul>
+      <label  class="selectedingredientslabel"  >Recipe Ingredients: <br><div>(doubleclick selected items to remove it)</div></label>
+      <div class="selectedingredients"></div>
+      <form id="stepsForm">
+        <label for="steps">Enter the steps:</label><br>
+        <textarea id="steps" name="steps" rows="10" cols="50" placeholder="Enter steps here..."></textarea><br><br>
+      </form>
+    
+      <div class="buttoncontainer">
+        <button class="submitfinal">Submit Recipe</button>
+      </div>
+
+ 
+    </div>
+    <div class="upload-container">
+      <form id="uploadForm">
+          <label for="fileUpload" class="upload-label">Upload Image</label>
+          <input type="file" id="fileUpload" accept="image/*">
+          <div class="image-preview" id="imagePreview">
+              <img id="imagePreviewImg" src="" alt="Image Preview" class="image-preview-img">
+              <span class="image-preview-text">No image uploaded</span>
+          </div>
+         </div>
+        </div>
+  </body>
+  <script src="post.js"></script>
+</html>

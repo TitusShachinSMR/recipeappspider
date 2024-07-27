@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe-app login page</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap" rel="stylesheet">
+  </head>
+    
+   <p class='logocontainer'>    
+        TASTY TENDER 
+ 
+           WELCOME TO THE WORLD OF RECIPES
+    find recipes for your ingredients rather than ingredients for recipes
+                            
+   </p>
+      <div class="slider">
+        <div class="slides">
+            <img class="slide" src="food1.jpg" alt="Image #1">
+            <img class="slide" src="food2.jpg" alt="Image #2">
+            <img class="slide" src="food3.jpg" alt="Image #3">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+    </div>
+    <div class="container">
+    
+      <form id="loginForm" action="/login" method="POST">
+      <h2 class="heading">Tasty Tender</h2>
+      <h2>Login</h2>
+      <div class="username">
+        <input type="text" name="username"placeholder="username" required>
+    </div>
+    <div class="password">
+        <input type="password" name="password" placeholder="password" required>
+    </div>
+    <div class="buttoncontainer">
+      <button class="login" type="submit">Login</button>
+    </form>
+      <div class="new">New to TastyTender?</div>
+      <button class="Register"><a href="/register"> Register</a></button>
+    </div>
+    </div>
+
+  
+    <script src="login.js"></script>
+  </body>
+</html>
