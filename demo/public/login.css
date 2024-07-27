@@ -1,0 +1,225 @@
+body {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  background-image: url("loginbackground.jpg");
+}
+
+.bg2 {
+  position: absolute;
+  opacity: 1;
+  display: none;
+}
+.bg3 {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  height: 50%;
+  width: 50%;
+  z-index: 0;
+}
+
+.container {
+  font-family: "Playwrite US Modern", sans-serif;
+  box-shadow: rgb(234, 255, 0) 2px 2px 2px 2px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  background-image: url("background.jpg");
+  width: 40%;
+  height: 80%;
+  position: fixed;
+  right: 5%;
+  top: 10%;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.Register:hover {
+  background: linear-gradient(red, transparent),
+    linear-gradient(to top left, lime, transparent),
+    linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+  color: black;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  margin-top: 0;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.username,
+.password {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+input[type="password"],
+input[type="text"] {
+  height: 40px;
+  width: 95%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.login {
+  display: flex;
+  height: 30px;
+  width: 40%;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+}
+.login:hover {
+  background: linear-gradient(red, transparent),
+    linear-gradient(to top left, lime, transparent),
+    linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  height: 35px;
+  width: 42%;
+  border-radius: 5px;
+}
+.buttoncontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.new {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.Register {
+  margin: 20px;
+  height: 30px;
+  width: 80%;
+  background-color: black;
+  color: rgb(255, 249, 249);
+  border-radius: 10px;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+}
+.Register:hover {
+  height: 35px;
+  width: 85%;
+}
+
+.slider {
+  position: absolute;
+  left: 3%;
+  top: 35%;
+  margin: auto;
+  width: 45%;
+  height: fit-content;
+  max-height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgb(255, 234, 0) 2px 2px 2px 2px;
+  background-color: white;
+}
+.slider img {
+  width: 100%;
+  display: none;
+}
+img.displaySlide {
+  display: block;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 10px 15px;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.logocontainer {
+  width: 45%;
+  height: 200px;
+  margin: 11px;
+  color: white;
+  position: fixed;
+  left: 3%;
+  text-align: center;
+  font-family: "Playwrite US Modern", sans-serif;
+  white-space: pre-wrap;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .slider {
+    display: none;
+  }
+  .container {
+    top: 20vh;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    position: relative;
+  }
+  .logocontainer {
+    display: none;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .heading {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  input[type="password"],
+  input[type="text"] {
+    height: 25px;
+  }
+  .login {
+    font-size: 15px;
+    padding: 3px;
+    border-radius: 10px;
+  }
+  .new {
+    font-size: 12px;
+  }
+}

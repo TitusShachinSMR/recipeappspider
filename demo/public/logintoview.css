@@ -1,0 +1,45 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top right,
+    rgb(148, 1, 82),
+    rgba(232, 248, 8, 0.986)
+  );
+}
+
+.container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-box h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.message-box p {
+  color: #666;
+  font-size: 16px;
+}
+
+.message-box a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.message-box a:hover {
+  text-decoration: underline;
+}
