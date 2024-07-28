@@ -68,8 +68,8 @@ Tasty Tender is a web application for exploring recipes based on ingredients and
    - Enter your username and password to log in.
 #### else 
 clone the reporsitory 
-you can see the demo folder , which has all the files
-install node module, express, and run the program buy node app.js
+you can see the demo folder , which has all the files, now 
+install node module, express, and run the program by node app.js
 
 
 #### 6. this is link for demo of the recipe app, click it
