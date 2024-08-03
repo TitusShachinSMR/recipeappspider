@@ -112,10 +112,10 @@ app.post("/register", async (req, res) => {
       db.query(sql, user, (err, result) => {
         if (err) {
           console.error("Error registering user:", err);
-          return res.status(500).json({ message: "Error registering user" });
+          return res.json({ message: "Error registering user" });
         }
 
-        return res.status(201).json({ message: "Registered successfully" });
+        return res.json({ message: "Registered successfully" });
       });
     });
   } catch (error) {
@@ -143,15 +143,15 @@ app.post("/login", async (req, res) => {
           const userId = results[0].id;
           res.json({ userId: userId, username: username });
         } else {
-          res.status(403).json({ message: "invalid credentials" });
+          res.json({ message: "invalid credentials" });
         }
       } else {
-        res.status(403).redirect("/login");
+        res.redirect("/login");
       }
     });
   } catch (err) {
     console.error("Error logging in:", err);
-    res.status(500).send("Error logging in");
+    res.send("Error logging in");
   }
 });
 
@@ -272,13 +272,13 @@ app.get("/recipe/:id", (req, res) => {
   db.query(query, [recipeId], (err, results) => {
     if (err) {
       console.error("Error executing query:", err);
-      return res.status(500).json({ error: "Internal server error" });
+      return res.json({ error: "Internal server error" });
     }
     console.log(results);
     if (results.length > 0) {
       res.json(results);
     } else {
-      res.status(404).json({ error: "Recipe not found" });
+      res.json({ error: "Recipe not found" });
     }
   });
 });
@@ -311,12 +311,12 @@ app.post("/comments", (req, res) => {
   db.query(sql, values, (err, result) => {
     if (err) {
       console.error("Error inserting comment:", err);
-      return res.status(500).json({ error: "Error inserting comment" });
+      return res.json({ error: "Error inserting comment" });
     }
 
     console.log("Inserted comment:", result);
     // Send a response back to the client
-    res.status(201).json({ message: "Commented successfully" });
+    res.json({ message: "Commented successfully" });
   });
 });
 
@@ -337,12 +337,12 @@ app.post("/commentsaved", (req, res) => {
   db.query(sql, values, (err, result) => {
     if (err) {
       console.error("Error inserting comment:", err);
-      return res.status(500).json({ error: "Error inserting comment" });
+      return res.json({ error: "Error inserting comment" });
     }
 
     console.log("Inserted comment:", result);
     // Send a response back to the client
-    res.status(201).json({ message: "Commented successfully" });
+    res.json({ message: "Commented successfully" });
   });
 });
 // Configure multer for image upload
@@ -372,11 +372,11 @@ app.post("/submit-recipe", upload.single("image"), (req, res) => {
 
   db.query(getDietTypeIdQuery, [dietType], (error, results) => {
     if (error) {
-      return res.status(500).json({ error: error.message });
+      return res.json({ error: error.message });
     }
 
     if (results.length === 0) {
-      return res.status(400).json({ error: "Invalid diet type" });
+      return res.json({ error: "Invalid diet type" });
     }
 
     const dietTypeId = results[0].restriction_id;
@@ -431,7 +431,7 @@ app.post("/submit-recipe", upload.single("image"), (req, res) => {
 
           db.query(insertIngredientQuery, [ingredientValues], (err, result) => {
             if (err) {
-              return res.status(500).json({ error: err.message });
+              return res.json({ error: err.message });
             }
 
             res.json({ message: "Recipe submitted successfully!" });
@@ -446,7 +446,7 @@ app.post("/saverecipe", (req, res) => {
   const { userId, recipeid } = req.body;
   console.log(userId, recipeid);
   if (!userId || !recipeid) {
-    res.status(500).json({ error: "some error" });
+    res.json({ error: "some error" });
     return;
   }
   const insertQuery =
@@ -458,7 +458,7 @@ app.post("/saverecipe", (req, res) => {
       return;
     }
     console.log("Recipe saved successfully!");
-    res.status(200).json({ message: "Recipe saved successfully!" });
+    res.json({ message: "Recipe saved successfully!" });
   });
 });
 // creating end point for getting all the recipe save by user
@@ -475,7 +475,7 @@ app.get("/saved-recipes/:user_id", (req, res) => {
   db.query(query, [userId], (err, results) => {
     if (err) {
       console.error("Error fetching saved recipes:", err);
-      res.status(500).json({ error: "Error fetching saved recipes" });
+      res.json({ error: "Error fetching saved recipes" });
       return;
     }
 
@@ -502,7 +502,7 @@ app.get("/comments/:recipe_id", (req, res) => {
       return;
     }
 
-    res.status(200).json(results);
+    res.json(results);
   });
 });
 // Port Number
