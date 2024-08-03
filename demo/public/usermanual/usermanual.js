@@ -1,6 +1,6 @@
-const userId = window.location.pathname.split("/").pop();
-document.getElementById("home").href = `/user/${userId}`;
-document.getElementById("postlink").href = `/upload/${userId}`;
+
+document.getElementById("home").href = `/user`;
+document.getElementById("postlink").href = `/upload`;
 const opennav = document.getElementById("mySidenav");
 const openbtn = document.querySelector(".openbtn");
 const closebtn = document.querySelector(".closebtn");
