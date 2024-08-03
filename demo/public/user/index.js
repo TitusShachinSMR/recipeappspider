@@ -148,8 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
   cuisineDiv.addEventListener("click", () => {
     optionsContainer.classList.toggle("active");
   });
-
-  // Making the cuisine clicked to get into the button
   const cuisine = [];
   const cuisinelist = document.querySelectorAll("input[name='cuisine']");
 
@@ -173,8 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Handling dietary restrictions
-  const diet = [];
+  // making dietary restrictioncontainer active.
   const dietaryrestriction = document.querySelector(".dietaryrestriction");
   const dietcontainer = document.querySelector(".dietcontainer");
   dietaryrestriction.addEventListener("click", () => {
@@ -392,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const requestData = {
       diet: diet,
       cuisine: cuisine,
-      time: parseInt(timefinalised), // Ensure timefinalised is parsed correctly
+      time: parseInt(timefinalised), // ensures timefinalised is parsed correctly
       ingredients: finalingredients,
     };
 
@@ -413,10 +410,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await response.json();
       const recipeContainer = document.querySelector(".ingredientslist");
-      recipeContainer.innerHTML = ""; // Clear previous results
+      recipeContainer.innerHTML = ""; // clear previous results
       console.log(Array.from(data));
       if (Array.from(data).length == 0) {
-        // Check if data array is empty
+        // if array is empty
         const message = document.createElement("div");
         message.innerHTML =
           "No results found !<br/> try with other set of ingredients<br/> and constrictions";
@@ -459,8 +456,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".submitfinal").addEventListener("click", (e) => {
     e.preventDefault(); // Prevent default form submission if this is inside a form
     document.querySelector(".addtocart").style.display = "none";
-    const dietlist = document.querySelectorAll(".diet-checkbox"); // Ensure correct selectors
-    const cuisinelist = document.querySelectorAll(".cuisine-checkbox"); // Ensure correct selectors
+    const dietlist = document.querySelectorAll(".diet-checkbox"); 
+    const cuisinelist = document.querySelectorAll(".cuisine-checkbox"); 
     fetchAndDisplayRecipes();
     window.scrollTo(0, 0);
   });
