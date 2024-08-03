@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  //doubleclick to remove ingredients from container(you can delete the selected ingredients in card on double click)
+  //doubleclick to remove ingredients from container(you can delete the selected ingredients in card on double click
   function doubleclick() {
     document.querySelectorAll(".chosen").forEach((div) => {
       div.addEventListener("dblclick", function () {
@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!document.querySelector(".searchcontainer").contains(event.target)) {
       // Click is outside the container
       document.querySelector(".search-results").style.display = "none";
-      // Execute desired logic here
     }
   });
 
@@ -504,12 +503,10 @@ document.addEventListener("DOMContentLoaded", () => {
   speakButton.addEventListener("click", () => {
     const paragraph = document.querySelector(".procedure").innerText;
     utterance = new SpeechSynthesisUtterance(paragraph);
-    // Start new speech
-    // Optionally, you can set some properties of the utterance
-    utterance.lang = "en-US"; // Language and accent
-    utterance.pitch = 1; // 0 to 2, default is 1
-    utterance.rate = 1; // 0.1 to 10, default is 1
-    utterance.volume = 1; // 0 to 1, default is 1
+    utterance.lang = "en-US"; 
+    utterance.pitch = 1;
+    utterance.rate = 1;
+    utterance.volume = 1;
 
     window.speechSynthesis.speak(utterance);
   });
